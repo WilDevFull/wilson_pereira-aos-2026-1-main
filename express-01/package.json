@@ -1,0 +1,29 @@
+{
+  "name": "express-01",
+  "version": "1.0.0",
+  "description": "Projeto Express + PostgreSQL para estudo",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node api/index.js"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "sequelize"
+  ],
+  "author": "Marcio Bueno",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/node": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.12",
+    "pg": "^8.20.0",
+    "sequelize": "^6.37.8",
+    "uuid": "^8.3.2"
+  }
+}
