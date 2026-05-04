@@ -1,17 +1,18 @@
-# Dependências do Node
+# Ignorar dependências em qualquer nível do projeto
 node_modules/
+**/node_modules/
 
 # Variáveis de Ambiente
 .env
 .env.*
-!.env.sample # O .env.sample não deve ser ignorado para que outros saibam quais variáveis criar
+
 
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
+yarn-error.log*npm
 
 # Pastas de Build (Caso o Babel gere uma pasta com o código transpilado)
 dist/
