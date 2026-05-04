@@ -11,7 +11,7 @@
     "postgresql",
     "sequelize"
   ],
-  "author": "Marcio Bueno",
+  "author": "Wilson Pereira",
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {

@@ -1,5 +1,6 @@
 import Sequelize from "sequelize";
 
+
 import getUserModel from "./user";
 import getMessageModel from "./message";
 import getTarefaModel from "./tarefa";
@@ -21,6 +22,7 @@ const models = {
   User: getUserModel(sequelize, Sequelize),
   Message: getMessageModel(sequelize, Sequelize),
   Tarefa: getTarefaModel(sequelize, Sequelize),
+  RefreshToken: getRefreshTokenModel(sequelize, Sequelize),
 };
 
 Object.keys(models).forEach((key) => {
