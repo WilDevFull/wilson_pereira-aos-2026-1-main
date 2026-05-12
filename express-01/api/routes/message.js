@@ -28,16 +28,15 @@ router.delete("/:messageId", async (req, res) => {
   const result = await req.context.models.Message.destroy({
     where: { id: req.params.messageId },
   });
+  return res.send(true);
+});
+
 router.put("/:messageId", async (req, res) => {
   const message = await req.context.models.Message.findByPk(req.params.messageId);
   if (message) {
-    await message.update({
-      text: req.body.text,
-    });
+    await message.update({ text: req.body.text });
   }
   return res.send(message);
-});
-  return res.send(true);
 });
 
 export default router;
