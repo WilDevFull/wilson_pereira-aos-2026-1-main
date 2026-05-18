@@ -5,7 +5,8 @@
   "main": "api/index.js",
   "scripts": {
     "start": "nodemon --exec babel-node api/index.js",
-    "build": "babel api -d dist"
+    "build": "babel api -d dist",
+    "vercel-build": "babel api -d dist"
   },
   "keywords": [
     "express",

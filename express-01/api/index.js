@@ -40,16 +40,16 @@ sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
   if (eraseDatabaseOnSync) {
     await createUsersWithMessages();
   }
-});
 
-// Só inicia o servidor localmente (no seu PC) se NÃO estiver rodando no Vercel
-if (!process.env.VERCEL) {
-  app.listen(port, () =>
-    console.log(
-      "Express-01 app listening on port " + port + "!\n" + (process.env.MESSAGE || ""),
-    ),
-  );
-}
+  // O servidor só vai tentar "ouvir" a porta localmente. Em produção no Vercel, isso é ignorado.
+  if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () =>
+      console.log(
+        "Express-01 app listening on port " + port + "!\n" + (process.env.MESSAGE || ""),
+      ),
+    );
+  }
+});
 
 export default app;
  
