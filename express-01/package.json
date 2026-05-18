@@ -4,7 +4,8 @@
   "description": "Projeto Express + PostgreSQL para estudo",
   "main": "api/index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node api/index.js"
+    "start": "nodemon --exec babel-node api/index.js",
+    "build": "babel api -d dist"
   },
   "keywords": [
     "express",
@@ -26,5 +27,8 @@
     "pg": "^8.20.0",
     "sequelize": "^6.37.8",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6"
   }
 }

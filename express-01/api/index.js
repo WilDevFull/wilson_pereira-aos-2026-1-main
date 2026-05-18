@@ -40,13 +40,18 @@ sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
   if (eraseDatabaseOnSync) {
     await createUsersWithMessages();
   }
- 
+});
+
+// Só inicia o servidor localmente (no seu PC) se NÃO estiver rodando no Vercel
+if (!process.env.VERCEL) {
   app.listen(port, () =>
     console.log(
-      "Express-01 app listening on port " + port + "!\n" + process.env.MESSAGE,
+      "Express-01 app listening on port " + port + "!\n" + (process.env.MESSAGE || ""),
     ),
   );
-});
+}
+
+export default app;
  
 // Senhas adicionadas para permitir o teste da rota POST /session
 const createUsersWithMessages = async () => {
