@@ -51,7 +51,7 @@ sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
   }
 });
 
-export default app;
+
  
 // Senhas adicionadas para permitir o teste da rota POST /session
 const createUsersWithMessages = async () => {
